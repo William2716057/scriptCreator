@@ -7,6 +7,7 @@ $content = Get-Content -Raw -Path $filePath
 #initialise variable to store characters to print
 $output = ""
 
+#loop through characters in string
 for ($i = 0; $i -lt $content.Length -and $i -lt 64; $i += 2) {
     $output += $content[$i]
 }
