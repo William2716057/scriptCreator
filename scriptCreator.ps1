@@ -8,9 +8,14 @@ $content = Get-Content -Raw -Path $filePath
 $output = ""
 
 #loop through each character in string
-for ($i = 0; $i -lt $content.Length; $i += 2) {
-	$output += $content[$i]
+#for ($i = 0; $i -lt $content.Length; $i += 2) {
+#	$output += $content[$i]
+#}
+
+for ($i = 0; $i -lt $content.Length -and $i -lt 64; $i += 2) {
+    $output += $content[$i]
 }
+
 
 # print result
 Write-Output $output
